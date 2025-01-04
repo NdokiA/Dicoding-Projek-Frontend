@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'LiberationSans';
+    src: url('assets/fonts/liberation_sans/LiberationSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mikodacs';
+    src: url('assets/fonts/mikodacs/MikodacsPCS.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+:root{
+    --licorice: #1B1212;
+    --jet-black: #343434;
+    --dark-red: #2E1011;
+    --red: #641113;
+    --brown-orange: #553116;
+    --black: #050000;
+    --gold: #9E6b40;
+    --cream: #ebcc9e;
+}
+body{
+    background-color: var(--jet-black);
+}
+header{
+    background-color: var(--licorice);
+    height: 16vw;
+    max-height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+
+header .logo-image{
+    height: 12vw;
+    max-height: 3rem;
+    width: auto;
+    object-fit: contain;
+}
+
+header .icon{
+    height: 12vw;
+    max-height: 5rem;
+    width: auto;
+    object-fit: contain;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    width: 100%;
+    height: auto;
+}
+
+.container{
+    position: relative;
+    flex: 2;
+    background-color: var(--dark-red);
+    color: var(--licorice);
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1;
+    border-radius: 0.5rem;
+    max-width: 60em;
+    box-shadow: 0 4px 8px 0;
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    pointer-events: none;
+
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+    border-radius: 0.5rem 0 0 0;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 8px solid var(--red); 
+    border-left: 8px solid var(--gold); 
+    z-index: -1;
+}
+
+.container::after{
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    border-radius: 0 0 0.5rem 0;
+    margin-left: 5rem;
+    margin-top: 5rem;
+    top:10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 8px solid var(--gold); 
+    border-right: 8px solid var(--red); 
+    z-index: -2;
+}
+
+.container .lamps{
+    margin: 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.lamps .on-lamp{
+    background-color: var(--red);
+    width: 1.2rem;
+    height: 1rem;
+}
+
+.lamps .off-lamp{
+    background-color: var(--brown-orange);
+    width: 1.2rem;
+    height: 1rem;
+}
+
+.container .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem 2rem;
+
+    background-color: var(--licorice);
+    border: var(--gold) 2px solid;
+    border-radius: 10px;
+}
+
+.container .content-image{
+    flex: 1;
+    width: 100%;
+    max-width: 18em;
+    padding: 2rem;
+}
+
+.content-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    filter: drop-shadow(4px 4px 5px var(--gold));
+    
+}
+
+.container .content-texts{
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-family: 'Mikodacs';
+    letter-spacing: 2px;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--cream);
+    
+    margin-bottom: 2rem;
+    border-bottom: white 2px solid;
+}
+
+p{
+    font-family: 'LiberationSans';
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--cream);
+}
+
+.content-texts p{
+    text-align: left;
+}
+
+.assoc-lists ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.assoc-lists li{
+    display: inline-block;
+}
+
+.assoc-lists button{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.assoc-lists img {
+    width: 30px; 
+    height: 30px; 
+    object-fit: cover; 
+    transition: transform 0.3s ease;
+}
+
+.assoc-lists button:hover img {
+    filter: brightness(50%)
+}
+
+.assoc-button.active img {
+    transform: scale(1.5); 
+}
+
+aside {
+    flex: 1;
+    box-shadow: 0 4px 8px 0;
+    color: var(--licorice);
+    border-radius: 15px;
+    background-color: var(--dark-red);
+    margin-left: 1em;
+    margin-bottom: 0rem;
+    padding-bottom: 1rem;
+}
+
+aside h1{
+    margin: 0.5rem
+}
+
+
+.portraits{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portraits p {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.portrait-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100px;
+}
+
+.portrait {
+    display: inline-block;
+    flex-wrap: wrap;
+    width: 100px;
+    height: 100px;
+    background-image: url('assets/images/sinners.webp');
+    background-size: 600px;
+    margin-bottom: 0.5rem;
+}
+
+#yi-sang { background-position: 0 0; }
+#faust { background-position: -100px 0; }
+#don-quixote { background-position: -200px 0; }
+#ryoshu { background-position: -300px 0; }
+#meursault { background-position: -400px 0; }
+#hong-lu { background-position: -500px 0; }
+#heathcliff { background-position: 0 -117px; }
+#ishmael { background-position: -100px -117px; }
+#rodion { background-position: -200px -117px; }
+#sinclair { background-position: -300px -117px; }
+#outis { background-position: -400px -117px; }
+#gregor { background-position: -500px -117px; }
+
+@media screen and (max-width: 768px){
+    main{
+        flex-direction: column;
+    }
+    .header-content{
+        justify-content: center;
+    }
+    header .icon{
+        display: none;
+    }
+    .container .content{
+        flex-direction: column;
+    }
+    .container .content-image{
+        padding: 0;
+    }
+    .container h1{
+        font-size: 2rem;
+    }
+    .container p{
+        font-size: 13px;
+    }
+    aside{
+        margin-left: 0;
+        margin-top: 1.5rem;
+    }
+}
