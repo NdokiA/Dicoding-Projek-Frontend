@@ -11,18 +11,36 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-/* Initialize function to load content*/
-function loadContent(paragraphKey) {
+/*Replace title*/
+function replaceTitle(title){
+    document.getElementById('assoc-title').innerHTML = title;
+}
+
+function replaceImage(imagePath, altText){
+    let imageElement = document.getElementById('assoc-image');
+    imageElement.src = imagePath;
+    imageElement.alt = altText;
+}
+
+function replaceText(textPath){
+    fetch(textPath)
+        .then(response => response.text())
+        .then(text => {
+            const formattedText = text.replace(/\n/g, '<br>');
+            document.getElementById('assoc-texts').innerHTML = formattedText;
+        })
+        .catch(error => console.error(error));
+}
+
+/*Replace All Content*/
+function replaceAllContent(paragraphKey){
     fetch('content.json')
         .then(response => response.json())
         .then(data => {
-            /* Change the text and title of the page */
-            document.getElementById('text').innerText = data[paragraphKey[text]];
-            document.getElementById('title').innerText = data[paragraphKey[title]];
-
-            /* Change the image and alt text */
-            document.getElementById('image').src = data[paragraphKey[image]];
-            document.getElementById('image').alt = data[paragraphKey[alt]];
+            const content = data[paragraphKey];
+            replaceTitle(content.title);
+            replaceImage(content.image, content.alt);
+            replaceText(content.text);
         })
-        .catch(error => console.error('Error loading JSON file:', error));
+        .catch(error => console.error(error));
 }

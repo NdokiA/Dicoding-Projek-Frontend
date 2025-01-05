@@ -31,41 +31,41 @@
 
             <div class="content">
                 <div class="content-image">
-                    <img class="image" src="assets/images/dante-logo.webp" alt="Association">
+                    <img id="assoc-image" src="assets/images/dante-logo.webp" alt="Association">
                 </div>
                 <div class="content-texts">
-                    <h1>Associations</h1>
-                    <p class = 'texts'>
+                    <h1 id = 'assoc-title'>Associations</h1>
+                    <p id = 'assoc-texts'>
                         Associations seems to refer to large organizations that manage fixers. There are twelve Associations in the city. Each with their own expertises
                         <br><br>
                         They're seemingly acts as the major collective that manages the fixers. They work at much greater scale than your typical Fixer Office. Associations are divided into Branches, further divided into several Sections.
                         <br><br>
-                        Also, each association abides on their own structure, uniforms, and rules. We've met some associate fixers during our journey, and some sinner IDs gave me some informations to fill me in.
+                        Also, each association abides on their own structure, uniforms, and rules. We've met some associate fixers during our journey, and some sinners IDs gave me some informations to fill me in.
                     </p>
                 </div>
             </div>
 
             <div class="assoc-lists">
                 <ul>
-                    <li><button class="assoc-button active"><img src="assets/images/dante-logo.webp" alt="Associations"></button></li>
-                    <li><button class = "assoc-button"><img src="assets/images/hana.webp" alt="Hana Association"></button></li>
-                    <li><button class = "assoc-button"><img src="assets/images/zwei.webp" alt="Zwei Association"></button></li>
-                    <li><button class = "assoc-button"><img src="assets/images/question.png" alt="Tres Association"></button></li>
-                    <li><button class = "assoc-button"><img src="assets/images/shi.webp" alt="Shi Association"></button></li>
-                    <li><button class = "assoc-button"><img src="assets/images/cinq.webp" alt="Cinq Association"></button></li>
-                    <li><button class = "assoc-button"><img src="assets/images/liu.webp" alt="Liu Association"></button></li>
-                    <li><button class = "assoc-button"><img src="assets/images/seven.webp" alt="Seven Association"></button></li>
-                    <li><button class = "assoc-button"><img src="assets/images/question.png" alt="Eight Association"></button></li>
-                    <li><button class = "assoc-button"><img src="assets/images/devyat.webp" alt="Devyat Association"></button></li>
-                    <li><button class = "assoc-button"><img src="assets/images/dieci.png" alt="Dieci Association"></button></li>
-                    <li><button class = "assoc-button"><img src="assets/images/oufi.webp" alt="Oufi Association"></button></li>
-                    <li><button class = "assoc-button"><img src="assets/images/question.png" alt="Unknown Association"></button></li>
+                    <li><button class="assoc-button active" onclick= "replaceAllContent('association')"><img src="assets/images/dante-logo.webp" alt="Associations"></button></li>
+                    <li><button class = "assoc-button" onclick ="replaceAllContent('hana')"><img src="assets/images/hana.webp" alt="Hana Association"></button></li>
+                    <li><button class = "assoc-button" onclick = "replaceAllContent('zwei')"><img src="assets/images/zwei.webp" alt="Zwei Association"></button></li>
+                    <li><button class = "assoc-button" onclick = "replaceAllContent('tres')"><img src="assets/images/question.png" alt="Tres Association"></button></li>
+                    <li><button class = "assoc-button" onclick = "replaceAllContent('shi')"><img src="assets/images/shi.webp" alt="Shi Association"></button></li>
+                    <li><button class = "assoc-button" onclick = "replaceAllContent('cinq')"><img src="assets/images/cinq.webp" alt="Cinq Association"></button></li>
+                    <li><button class = "assoc-button" onclick = "replaceAllContent('liu')"><img src="assets/images/liu.webp" alt="Liu Association"></button></li>
+                    <li><button class = "assoc-button" onclick = "replaceAllContent('seven')"><img src="assets/images/seven.webp" alt="Seven Association"></button></li>
+                    <li><button class = "assoc-button" onclick = "replaceAllContent('eight')"><img src="assets/images/question.png" alt="Eight Association"></button></li>
+                    <li><button class = "assoc-button" onclick = "replaceAllContent('devyat')"><img src="assets/images/devyat.webp" alt="Devyat Association"></button></li>
+                    <li><button class = "assoc-button" onclick = "replaceAllContent('dieci')"><img src="assets/images/dieci.png" alt="Dieci Association"></button></li>
+                    <li><button class = "assoc-button" onclick = "replaceAllContent('oufi')"><img src="assets/images/oufi.webp" alt="Oufi Association"></button></li>
+                    <li><button class = "assoc-button" onclick = "replaceAllContent('12')"><img src="assets/images/question.png" alt="Unknown Association"></button></li>
                 </ul>
             </div>
 
         </div>
 
-        <aside  id = 'sinners' >
+        <aside  class = 'sinners' >
             <h1>The Sinners</h1>
             <div class = 'portraits'>
                 <div class = 'portrait-container'>
