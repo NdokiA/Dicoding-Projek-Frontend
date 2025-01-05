@@ -1,0 +1,80 @@
+{
+    "association": {
+        "title": "Association",
+        "text": "assets/texts/Association.txt",
+        "image": "assets/images/LimbusIcon.webp",
+        "alt": "Dante's Notes"
+    },
+    "hana": {
+        "title": "Hana Association",
+        "text": "assets/texts/Hana.txt",
+        "image": "assets/images/hana.webp",
+        "alt": "Hana Association"
+    },
+    "zwei": {
+        "title": "Zwei Association",
+        "text": "assets/texts/Zwei.txt",
+        "image": "assets/images/zwei.webp",
+        "alt": "Zwei Association"
+    },
+    "tres": {
+        "title": "Tres Association",
+        "text": "assets/texts/Tres.txt",
+        "image": "assets/images/question.png",
+        "alt": "Image Unavailable"
+    },
+    "shi": {
+        "title": "Shi Association",
+        "text": "assets/texts/Shi.txt",
+        "image": "assets/images/shi.webp",
+        "alt": "Shi Association"
+    },
+    "cinq": {
+        "title": "Cinq Association",
+        "text": "assets/texts/Cinq.txt",
+        "image": "assets/images/cinq.webp",
+        "alt": "Cinq Association"
+    },
+    "liu": {
+        "title": "Liu Association",
+        "text": "assets/texts/Liu.txt",
+        "image": "assets/images/liu.webp",
+        "alt": "Liu Association"
+    },
+    "seven": {
+        "title": "Seven Association",
+        "text": "assets/texts/Seven.txt",
+        "image": "assets/images/seven.webp",
+        "alt": "Seven Association"
+    },
+    "eight": {
+        "title": "Eight Association",
+        "text": "assets/texts/Eight.txt",
+        "image": "assets/images/question.png",
+        "alt": "Image Unavailable"
+    },
+    "devyat": {
+        "title": "Devyat Association",
+        "text": "assets/texts/Devyat.txt",
+        "image": "assets/images/devyat.webp",
+        "alt": "Devyat Association"
+    },
+    "dieci": {
+        "title": "Dieci Association",
+        "text": "assets/texts/Dieci.txt",
+        "image": "assets/images/dieci.png",
+        "alt": "Dieci Association"
+    },
+    "oufi": {
+        "title": "Öufi Association",
+        "text": "assets/texts/Oufi.txt",
+        "image": "assets/images/oufi.webp",
+        "alt": "Öufi Association"
+    },
+    "12": {
+        "title": "Unknown Association",
+        "text": "assets/texts/Unknown.txt",
+        "image": "assets/images/question.png",
+        "alt": "Image Unavailable"
+    }
+}
