@@ -27,6 +27,23 @@
     --gold: #9E6b40;
     --cream: #ebcc9e;
 }
+
+::-webkit-scrollbar {
+    margin-left: 1rem;
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--jet-black);
+    border-radius: 8px
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-red);
+    border-radius: 8px;
+}
+
+
 body{
     background-color: var(--jet-black);
 }
@@ -84,40 +101,7 @@ main{
     z-index: 1;
     border-radius: 0.5rem;
     max-width: 60em;
-    box-shadow: 0 4px 8px 0;
-}
-
-.container::before{
-    content: '';
-    position: absolute;
-    pointer-events: none;
-
-    margin-right: 5rem;
-    margin-bottom: 5rem;
-    border-radius: 0.5rem 0 0 0;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-top: 8px solid var(--red); 
-    border-left: 8px solid var(--gold); 
-    z-index: -1;
-}
-
-.container::after{
-    content: '';
-    position: absolute;
-    pointer-events: none;
-    border-radius: 0 0 0.5rem 0;
-    margin-left: 5rem;
-    margin-top: 5rem;
-    top:10px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-bottom: 8px solid var(--gold); 
-    border-right: 8px solid var(--red); 
-    z-index: -2;
+    box-shadow: 0 5px 20px 0 var(--black);
 }
 
 .container .lamps{
@@ -160,8 +144,8 @@ main{
 }
 
 .content-image img{
-    width: 100%;
-    height: auto;
+    height: 14rem;
+    width: auto;
     border-radius: 0.5rem;
     filter: drop-shadow(4px 4px 5px var(--gold));
     
@@ -170,8 +154,11 @@ main{
 .container .content-texts{
     flex: 1;
     width: 100%;
+    height: 20rem;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    margin-right: 0;
 }
 
 h1{
@@ -194,8 +181,12 @@ p{
     color: var(--cream);
 }
 
+.content-texts h1{
+    margin-right: 1.5rem;
+}
 .content-texts p{
     text-align: left;
+    margin-right: 1rem;
 }
 
 .assoc-lists ul{
@@ -246,7 +237,8 @@ aside {
 }
 
 aside h1{
-    margin: 0.5rem
+    margin: 0.5rem 2rem;
+
 }
 
 
@@ -306,6 +298,11 @@ aside h1{
     }
     .container .content-image{
         padding: 0;
+        margin-left: -1rem;
+    }
+    .container .content-texts{
+        overflow-y: hidden;
+        margin-left: 1rem;
     }
     .container h1{
         font-size: 2rem;
